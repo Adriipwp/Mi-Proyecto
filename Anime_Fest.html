@@ -1,0 +1,301 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Anime Film Fest 26'</title>
+  <!-- Bootstrap 5 + iconos (sin CSS externo) -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css" rel="stylesheet">
+  <!-- minicódigo inline solo para mantener estética dark y hover sin modificar Bootstrap, no se considera animación extra -->
+  <style>
+    body { background: #0b0b0f; }
+    .navbar { border-bottom: 2px solid #dc3545; }
+    .card { transition: all 0.15s ease-in-out; } /* transición suave para hover - mínimo indispensable */
+    .table-row-hover:hover { background-color: rgba(220,53,69,0.15); } /* solo para la tabla, mejora UX */
+    .hover-grow { transition: 0.2s; }
+  </style>
+</head>
+<body class="bg-dark text-light">
+
+<!-- ========== NAVBAR CON EFECTOS ========== -->
+<nav class="navbar navbar-expand-lg navbar-dark bg-black sticky-top shadow-lg">
+  <div class="container">
+    <a class="navbar-brand fw-bold text-danger" href="#">
+      <i class="bi bi-suit-heart-fill text-danger me-1"></i> アニメ · Romance Fest
+    </a>
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#menu"
+            aria-controls="menu" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="menu">
+      <ul class="navbar-nav ms-auto">
+        <li class="nav-item mx-1">
+          <a class="nav-link px-3 rounded-pill active" href="#peliculas"><i class="bi bi-film me-1"></i>Películas</a>
+        </li>
+        <li class="nav-item mx-1">
+          <a class="nav-link px-3 rounded-pill" href="#horarios"><i class="bi bi-calendar-week me-1"></i>Horarios</a>
+        </li>
+        <li class="nav-item mx-1">
+          <a class="nav-link px-3 rounded-pill" href="#reserva"><i class="bi bi-ticket-perforated me-1"></i>Reserva</a>
+        </li>
+      </ul>
+    </div>
+  </div>
+</nav>
+
+<!-- ========== HERO CON ANIMACIONES DE BOOTSTRAP ========== -->
+<section class="bg-danger text-white text-center py-5 position-relative overflow-hidden">
+  <div class="container position-relative" style="z-index: 2;">
+    <div class="fade-in show">
+      <h1 class="display-3 fw-bold animate__animated animate__fadeInDown">🌸 ROMANCE ANIME FILM FEST 2026 🌸</h1>
+      <p class="lead fs-3 animate__animated animate__fadeInUp">Las historias de amor que marcaron una generación vuelven a la gran pantalla.</p>
+      <a href="#peliculas" class="btn btn-outline-light btn-lg mt-3 px-5 rounded-pill shadow-lg border-2 fw-bold"
+         style="transition: transform 0.15s;" 
+         onmouseover="this.style.transform='scale(1.07)'" onmouseout="this.style.transform='scale(1)'">
+        <i class="bi bi-arrow-down-circle me-2"></i>Ver Cartelera
+      </a>
+    </div>
+  </div>
+  <!-- decoración con iconos -->
+  <div class="position-absolute bottom-0 start-0 text-white-50 opacity-25 mb-n2">
+    <i class="bi bi-hearts fs-1 mx-2"></i><i class="bi bi-hearts fs-2"></i><i class="bi bi-hearts fs-3"></i>
+  </div>
+</section>
+
+<!-- ========== PELÍCULAS DESTACADAS (con I Want to Eat Your Pancreas) ========== -->
+<section id="peliculas" class="py-5">
+  <div class="container">
+    <h2 class="text-center text-danger mb-5 fw-bold display-6"><i class="bi bi-camera-reels me-2"></i>Películas Destacadas</h2>
+
+    <div class="row g-4 justify-content-center">
+
+      <!-- Your Name -->
+      <div class="col-md-6 col-lg-3">
+        <div class="card bg-black text-light h-100 border border-danger border-opacity-25 shadow-lg"
+             onmouseover="this.style.transform='translateY(-8px)'; this.style.boxShadow='0 1rem 2rem rgba(220,53,69,0.3)';" 
+             onmouseout="this.style.transform='translateY(0)'; this.style.boxShadow='';">
+          <img src="https://upload.wikimedia.org/wikipedia/en/0/0b/Your_Name_poster.png" class="card-img-top p-2" style="border-radius: 20px;">
+          <div class="card-body text-center">
+            <h5 class="card-title fw-bold">Your Name <span class="badge bg-danger ms-1">top</span></h5>
+            <p class="card-text small">Cuerpos intercambiados, corazones entrelazados.</p>
+            <button class="btn btn-danger w-100 rounded-pill" data-bs-toggle="tooltip" title="¡No te la pierdas!">
+              <i class="bi bi-ticket-fill me-2"></i>Comprar
+            </button>
+          </div>
+        </div>
+      </div>
+
+      <!-- A Silent Voice -->
+      <div class="col-md-6 col-lg-3">
+        <div class="card bg-black text-light h-100 border border-danger border-opacity-25 shadow-lg"
+             onmouseover="this.style.transform='translateY(-8px)'; this.style.boxShadow='0 1rem 2rem rgba(220,53,69,0.3)';" 
+             onmouseout="this.style.transform='translateY(0)'; this.style.boxShadow='';">
+          <img src="https://upload.wikimedia.org/wikipedia/en/3/32/A_Silent_Voice_Film_Poster.jpg" class="card-img-top p-2" style="border-radius: 20px;">
+          <div class="card-body text-center">
+            <h5 class="card-title fw-bold">A Silent Voice</h5>
+            <p class="card-text small">El sonido del perdón y la amistad.</p>
+            <button class="btn btn-outline-danger w-100 rounded-pill" data-bs-toggle="collapse" href="#reserva" role="button">
+              <i class="bi bi-ear-fill me-2"></i>Quiero verla
+            </button>
+          </div>
+        </div>
+      </div>
+
+      <!-- Weathering With You -->
+      <div class="col-md-6 col-lg-3">
+        <div class="card bg-black text-light h-100 border border-danger border-opacity-25 shadow-lg"
+             onmouseover="this.style.transform='translateY(-8px)'; this.style.boxShadow='0 1rem 2rem rgba(220,53,69,0.3)';" 
+             onmouseout="this.style.transform='translateY(0)'; this.style.boxShadow='';">
+          <img src="https://upload.wikimedia.org/wikipedia/en/6/66/Weathering_with_You_Poster.jpg" class="card-img-top p-2" style="border-radius: 20px;">
+          <div class="card-body text-center">
+            <h5 class="card-title fw-bold">Weathering With You <span class="badge bg-warning text-dark ms-1">🌧️</span></h5>
+            <p class="card-text small">El sol y la lluvia de su amor.</p>
+            <button class="btn btn-danger w-100 rounded-pill" data-bs-toggle="modal" data-bs-target="#modalWeathering">
+              <i class="bi bi-cloud-rain-fill me-2"></i>Avance
+            </button>
+          </div>
+        </div>
+      </div>
+
+      <!-- I Want to Eat Your Pancreas (NUEVA) -->
+      <div class="col-md-6 col-lg-3">
+        <div class="card bg-black text-light h-100 border border-danger border-opacity-25 shadow-lg"
+             onmouseover="this.style.transform='translateY(-8px)'; this.style.boxShadow='0 1rem 2rem rgba(220,53,69,0.3)';" 
+             onmouseout="this.style.transform='translateY(0)'; this.style.boxShadow='';">
+          <img src="unnamed.jpg" class="card-img-top p-2" style="border-radius: 20px; background-color: #1a1a1a;">
+          <div class="card-body text-center">
+            <h5 class="card-title fw-bold">I Want to Eat Your Pancreas</h5>
+            <p class="card-text small">Una amistad que florece ante lo inevitable.</p>
+            <button class="btn btn-outline-danger w-100 rounded-pill" data-bs-toggle="modal" data-bs-target="#modalPancreas">
+              <i class="bi bi-heart-fill me-2"></i>Más info
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Modal para Weathering With You -->
+<div class="modal fade" id="modalWeathering" tabindex="-1" aria-hidden="true">
+  <div class="modal-dialog modal-dialog-centered">
+    <div class="modal-content bg-black text-light border-danger">
+      <div class="modal-header border-danger">
+        <h5 class="modal-title"><i class="bi bi-play-circle-fill text-danger me-2"></i>Weathering With You</h5>
+        <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal"></button>
+      </div>
+      <div class="modal-body">
+        <p>Próximamente función especial con introducción del director. <br> <span class="text-danger">¡No te lo pierdas!</span></p>
+      </div>
+      <div class="modal-footer border-danger">
+        <button type="button" class="btn btn-danger" data-bs-dismiss="modal">Cerrar</button>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- Modal para I Want to Eat Your Pancreas -->
+<div class="modal fade" id="modalPancreas" tabindex="-1" aria-hidden="true">
+  <div class="modal-dialog modal-dialog-centered">
+    <div class="modal-content bg-black text-light border-danger">
+      <div class="modal-header border-danger">
+        <h5 class="modal-title"><i class="bi bi-suit-heart-fill text-danger me-2"></i>I Want to Eat Your Pancreas</h5>
+        <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal"></button>
+      </div>
+      <div class="modal-body">
+        <p>Una historia que te robará el aliento. Basada en la novela best seller.<br> <strong class="text-danger">Función especial con debate post-película.</strong></p>
+      </div>
+      <div class="modal-footer border-danger">
+        <button type="button" class="btn btn-danger" data-bs-dismiss="modal">Entendido</button>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- ========== HORARIOS CON NUEVA PELÍCULA ========== -->
+<section id="horarios" class="py-5 bg-black">
+  <div class="container">
+    <h2 class="text-center text-danger mb-4 fw-bold display-6"><i class="bi bi-clock-history me-3"></i>Horarios</h2>
+
+    <div class="table-responsive rounded-4 overflow-hidden shadow">
+      <table class="table table-dark table-bordered border-secondary text-center align-middle mb-0">
+        <thead class="text-white" style="background: #b1021a;">
+          <tr>
+            <th class="p-3">Película</th>
+            <th class="p-3">Viernes <i class="bi bi-calendar2-heart ms-1"></i></th>
+            <th class="p-3">Sábado <i class="bi bi-calendar2-heart-fill ms-1"></i></th>
+            <th class="p-3">Domingo <i class="bi bi-calendar2-week ms-1"></i></th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr class="table-row-hover" style="cursor: pointer;" onmouseenter="this.style.backgroundColor='rgba(220,53,69,0.15)'" onmouseleave="this.style.backgroundColor=''">
+            <td class="fw-bold">Your Name</td>
+            <td>18:00 <span class="badge bg-danger ms-1">disponible</span></td>
+            <td>20:30 <span class="badge bg-danger ms-1">casi lleno</span></td>
+            <td>17:00</td>
+          </tr>
+          <tr onmouseenter="this.style.backgroundColor='rgba(220,53,69,0.15)'" onmouseleave="this.style.backgroundColor=''">
+            <td class="fw-bold">A Silent Voice</td>
+            <td>20:45</td>
+            <td>22:15 <span class="badge bg-warning text-dark">últimas</span></td>
+            <td>19:30</td>
+          </tr>
+          <tr onmouseenter="this.style.backgroundColor='rgba(220,53,69,0.15)'" onmouseleave="this.style.backgroundColor=''">
+            <td class="fw-bold">Weathering With You</td>
+            <td>17:15 <span class="badge bg-success">nuevo</span></td>
+            <td>19:00</td>
+            <td>16:30</td>
+          </tr>
+          <tr onmouseenter="this.style.backgroundColor='rgba(220,53,69,0.15)'" onmouseleave="this.style.backgroundColor=''">
+            <td class="fw-bold">I Want to Eat Your Pancreas</td>
+            <td>22:30 <span class="badge bg-danger">casi lleno</span></td>
+            <td>18:45 <span class="badge bg-info">3 disponibles</span></td>
+            <td>21:00</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+    <p class="text-muted text-center mt-3"><i class="bi bi-info-circle me-2"></i>Pasa el ratón sobre las filas para ver el efecto</p>
+  </div>
+</section>
+
+<!-- ========== RESERVA CON FORMULARIO MEJORADO ========== -->
+<section id="reserva" class="py-5">
+  <div class="container">
+    <h2 class="text-center text-danger mb-4 fw-bold display-6"><i class="bi bi-envelope-paper-heart me-2"></i>Reserva tu Entrada</h2>
+
+    <div class="row justify-content-center">
+      <div class="col-md-8 col-lg-6">
+        <div class="bg-black p-4 rounded-4 shadow-lg border border-danger border-opacity-50 transition"
+             onmouseenter="this.style.boxShadow='0 20px 30px rgba(220,53,69,0.4)'" onmouseleave="this.style.boxShadow=''">
+          <form>
+            <div class="mb-4">
+              <label class="form-label fw-bold"><i class="bi bi-person-circle me-2 text-danger"></i>Nombre completo</label>
+              <input type="text" class="form-control form-control-lg bg-dark text-light border-secondary" placeholder="p.ej. Sakura Yamauchi">
+            </div>
+            <div class="mb-4">
+              <label class="form-label fw-bold"><i class="bi bi-envelope-at me-2 text-danger"></i>Correo electrónico</label>
+              <input type="email" class="form-control form-control-lg bg-dark text-light border-secondary" placeholder="haruki@ejemplo.com">
+            </div>
+            <div class="mb-4">
+              <label class="form-label fw-bold"><i class="bi bi-camera-reels me-2 text-danger"></i>Selecciona película</label>
+              <select class="form-select form-select-lg bg-dark text-light border-secondary">
+                <option>Your Name (Kimi no Na wa)</option>
+                <option>A Silent Voice (Koe no Katachi)</option>
+                <option>Weathering With You (Tenki no Ko)</option>
+                <option selected>I Want to Eat Your Pancreas (Kimi no Suizō wo Tabetai)</option>
+              </select>
+            </div>
+            <div class="mb-4">
+              <label class="form-label fw-bold"><i class="bi bi-calendar3 me-2 text-danger"></i>Día</label>
+              <div class="d-flex gap-3">
+                <div class="form-check">
+                  <input class="form-check-input" type="radio" name="dia" id="viernes" checked>
+                  <label class="form-check-label" for="viernes">Viernes</label>
+                </div>
+                <div class="form-check">
+                  <input class="form-check-input" type="radio" name="dia" id="sabado">
+                  <label class="form-check-label" for="sabado">Sábado</label>
+                </div>
+                <div class="form-check">
+                  <input class="form-check-input" type="radio" name="dia" id="domingo">
+                  <label class="form-check-label" for="domingo">Domingo</label>
+                </div>
+              </div>
+            </div>
+            <button type="submit" class="btn btn-danger btn-lg w-100 rounded-pill fw-bold position-relative overflow-hidden" 
+                    onmouseover="this.style.transform='scale(1.02)'; this.style.boxShadow='0 0 15px #dc3545'"
+                    onmouseout="this.style.transform='scale(1)'; this.style.boxShadow='none'"
+                    style="transition: all 0.2s;">
+              <i class="bi bi-ticket-perforated-fill me-2"></i>Confirmar reserva 💖
+            </button>
+            <p class="text-center text-secondary small mt-3">Recibirás un email con los detalles.</p>
+          </form>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ========== FOOTER ========== -->
+<footer class="bg-black text-white text-center py-5 border-top border-danger">
+  <div class="container">
+    <div class="d-flex justify-content-center gap-4 fs-3 mb-3">
+      <a href="#" class="text-danger"><i class="bi bi-twitter-x"></i></a>
+      <a href="#" class="text-danger"><i class="bi bi-instagram"></i></a>
+      <a href="#" class="text-danger"><i class="bi bi-tiktok"></i></a>
+      <a href="#" class="text-danger"><i class="bi bi-envelope-heart"></i></a>
+    </div>
+    <p class="mb-1 fw-light">© 2026 Romance Anime Film Fest · 恋のアニメ祭り</p>
+  </div>
+</footer>
+
+<!-- script de Bootstrap + tooltips -->
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+<script>
+  // Inicializar tooltips
+  document.querySelectorAll('[data-bs-toggle="tooltip"]').forEach(el => new bootstrap.Tooltip(el));
+</script>
+</body>
+</html>
