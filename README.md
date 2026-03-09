@@ -28,16 +28,20 @@ Proyecto Web - Trabajo Boostrap.
 - **Forms**: He usado este componente para realizar la parte de la reserva. | Elementos utilizados: (`form`, `form-control`, `form-select`, `form-check`).
 
 
-**Commits Realizados**
+**Commits Realizados en el html**
 
 - **main**: Primer commit - Web completa
 
   (Pone que estan hechos en main, porque no sale el otro branch que cree en el desktop).
   
 - **main**: Commit 1 - Quite unas letras japonesas que habia dentro del menú.
-- **main**: Commit 2 - Quite los iconos emojis.
-- **main**: Commit 3 - .
+- **main**: Commit 2 - Cambie el texto del header.
+- **main**: Commit 3 - Quite ALGUNOS de los emojis que habian en los textos.
+- **main**: Commit 4 - Cambie cosas dentro del archivo de html. | (No sale porque lo realize dentro del archivo de html, pero cambie las animaciones, algunos iconos..etc)
 
+**Otros Commits**
+
+ - **main**: Commit 1 - Borre la antigua carpeta de capturas y subi una nueva carpeta con las capturas del proceso de thunderbird y la vista de mi página web.
 
 **Dificultad encontrada**
 
